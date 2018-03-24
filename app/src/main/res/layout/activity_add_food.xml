@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.karthikvarma.profile.addFood">
+
+    <RelativeLayout
+        android:layout_width="572dp"
+        android:layout_height="869dp"
+        android:orientation="vertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_weight="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food Name"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="64dp"
+            tools:layout_editor_absoluteY="133dp"
+            android:layout_marginTop="17dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/foodname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="0dp"
+            android:layout_below="@+id/textView4"
+            android:layout_alignParentStart="true" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/radioGroup2"
+            android:layout_below="@+id/foodcalories"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp">
+            <RadioButton android:id="@+id/snacks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SNACKS"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/breakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BREAKFAST"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/lunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LUNCH"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DINNER"
+                android:onClick="onRadioButtonClicked"/>
+
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/foodname"
+            android:text="Food Calories"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="45dp"
+            android:id="@+id/textView6" />
+
+        <EditText
+            android:id="@+id/foodcalories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_below="@+id/textView6"
+            android:layout_alignParentStart="true" />
+
+
+        <Button
+            android:id="@+id/addFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="33dp"
+            android:layout_marginEnd="60dp"
+            android:background="@android:color/transparent"
+            android:text="Add food" />
+
+        <Button
+            android:id="@+id/viewAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/addFood"
+            android:layout_alignBottom="@+id/addFood"
+            android:layout_gravity="center_vertical"
+            android:layout_toEndOf="@+id/textView4"
+            android:background="@android:color/transparent"
+            android:text="view all" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
